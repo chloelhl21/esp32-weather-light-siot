@@ -11,9 +11,10 @@
 	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "LYW",
+		"navigationBarTitleText": "LHL",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
 	"uniIdRouter": {}
 }
+
