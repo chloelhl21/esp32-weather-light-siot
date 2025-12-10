@@ -1,0 +1,19 @@
+{
+	"pages": [
+		{
+			"path": "pages/smart-light/smart-light",
+			"style": {
+				"navigationBarTitleText": "SmartLightControl",
+				"navigationBarBackgroundColor": "#667eea",
+				"navigationBarTextStyle": "white"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "LYW",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}

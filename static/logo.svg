@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- 背景圆形 -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lightGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 背景圆 -->
+  <circle cx="100" cy="100" r="95" fill="url(#bgGradient)" opacity="0.95"/>
+  
+  <!-- 灯泡主体 -->
+  <g transform="translate(100, 80)">
+    <!-- 灯泡玻璃 -->
+    <ellipse cx="0" cy="0" rx="35" ry="45" fill="url(#lightGradient)" opacity="0.9" filter="url(#glow)"/>
+    
+    <!-- 光芒效果 -->
+    <g opacity="0.6">
+      <line x1="-50" y1="-30" x2="-60" y2="-40" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+      <line x1="50" y1="-30" x2="60" y2="-40" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+      <line x1="-45" y1="0" x2="-55" y2="0" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+      <line x1="45" y1="0" x2="55" y2="0" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+      <line x1="-40" y1="25" x2="-48" y2="35" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+      <line x1="40" y1="25" x2="48" y2="35" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    
+    <!-- 灯泡底座 -->
+    <rect x="-20" y="45" width="40" height="8" rx="2" fill="#E0E0E0"/>
+    <rect x="-18" y="53" width="36" height="6" rx="1" fill="#BDBDBD"/>
+    <rect x="-16" y="59" width="32" height="6" rx="1" fill="#9E9E9E"/>
+    
+    <!-- 灯丝 -->
+    <path d="M -10,20 Q -5,0 0,-10 Q 5,0 10,20" stroke="#FFA500" stroke-width="2" fill="none" opacity="0.8"/>
+  </g>
+  
+  <!-- IoT连接符号 -->
+  <g transform="translate(100, 155)" opacity="0.8">
+    <!-- 三个连接点 -->
+    <circle cx="-20" cy="0" r="4" fill="#fff"/>
+    <circle cx="0" cy="0" r="4" fill="#fff"/>
+    <circle cx="20" cy="0" r="4" fill="#fff"/>
+    <!-- 连接线 -->
+    <line x1="-20" y1="0" x2="-5" y2="0" stroke="#fff" stroke-width="2"/>
+    <line x1="5" y1="0" x2="20" y2="0" stroke="#fff" stroke-width="2"/>
+    <!-- WiFi波纹 -->
+    <path d="M 0,-8 Q -8,-12 -12,-16" stroke="#fff" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <path d="M 0,-8 Q 8,-12 12,-16" stroke="#fff" stroke-width="1.5" fill="none" opacity="0.6"/>
+  </g>
+</svg>
